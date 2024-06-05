@@ -12,7 +12,7 @@ label_result = Label(main, font=("Veranda, 16"))
 label_result.configure(bg="lightgray")
 label_result.place(x=250, y=50)
 
-conn = sqlite3.connect(r"C:\Users\Lenovo\Downloads\pol_lab02.s3db")
+conn = sqlite3.connect(r"pol_lab02.s3db")
 curs = conn.cursor()
 curs.execute("SELECT sgN from tnoun WHERE sgN LIKE 'P%'")
 result = curs.fetchone()[0]
