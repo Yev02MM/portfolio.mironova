@@ -12,7 +12,7 @@ label_result = Label(main, font=("Veranda, 16"))
 label_result.configure(bg="lightgray")
 label_result.place(x=250, y=50)
 
-conn = sqlite3.connect(r"pol_lab02.s3db")
+conn = sqlite3.connect('pol_lab02.s3db')
 curs = conn.cursor()
 curs.execute("SELECT sgN from tnoun WHERE sgN LIKE 'P%'")
 result = curs.fetchone()[0]
@@ -26,7 +26,7 @@ for i in range(13):
         e.grid(row=i, column=j)
 
 def get_n_nouns():
-    conn = sqlite3.connect(r"C:\Users\Lenovo\Downloads\pol_lab02.s3db")
+    conn = sqlite3.connect('pol_lab02.s3db')
     curs = conn.cursor()
     curs.execute("SELECT id, sgN, sgL from tnoun LIMIT 13")
     noun_list1 = []
@@ -42,7 +42,7 @@ def get_n_nouns():
 cb_nouns = ttk.Combobox(main, font=("Papyrus"))
 
 def combobox():
-    conn = sqlite3.connect(r"C:\Users\Lenovo\Downloads\pol_lab02.s3db")
+    conn = sqlite3.connect('pol_lab02.s3db')
     curs = conn.cursor()
     curs.execute("SELECT sgN from tnoun WHERE sgN LIKE 'P%'")
     noun_list = curs.fetchall()
