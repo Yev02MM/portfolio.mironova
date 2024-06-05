@@ -110,7 +110,7 @@ def freq_table(text_string) -> dict:
     return freqTable
 
 # частотність у тхт файлі
-file = open(r"C:\штуки\holidays.txt", "r")
+file = open(r"holidays.txt", "r")
 text = file.read()
 print(freq_table(text))
 
